@@ -3,21 +3,21 @@ a = input("введите 1-е число ")
 b = input("введите 2-е число ")
 c = input("введите 3-е число ")
 
-while type(a) != int:
+while type(a) != int:   #обработка исключений
   try:
     a = int(a)
   except ValueError:
     print('неправильно ввели 1 число')
     a = input('введите 1-e число ')
 
-while type(b) != int:
+while type(b) != int:   #обработка исключений
   try:
     b = int(b)
   except ValueError:
     print('неправильно ввели 2 число')
     b = input('введите 2-e число ')
 
-while type(c) != int:
+while type(c) != int:   #обработка исключений
   try:
     c = int(c)
   except ValueError:
