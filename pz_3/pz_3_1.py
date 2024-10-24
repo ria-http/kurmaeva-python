@@ -24,7 +24,7 @@ while type(c) != int:    #обработка исключений
     c = input('введите 3-e число ')
 
 if a > 0 and b > 0 and c < 0:
-  с
+  t = True
   print(t)
 elif a > 0 and b < 0 and c > 0:
   t = True
