@@ -3,14 +3,14 @@
 a = input("введите 1-е число ")
 b = input("введите 2-е число ")
 
-while type(a) != int:
+while type(a) != int:   #обработка исключений
   try:
     a = int(a)
   except ValueError:
     print('неправильно ввели 1 число')
     a = input('введите 1-e число ')
 
-while type(b) != int:
+while type(b) != int:   #обработка исключений
   try:
     b = int(b)
   except ValueError:
