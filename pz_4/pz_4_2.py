@@ -21,4 +21,4 @@ count = 0
 while a >= b:
   a -= b
   count += 1
-print(count)
+print('количество отрезков Б, размещенных на отрезке A -', count)
