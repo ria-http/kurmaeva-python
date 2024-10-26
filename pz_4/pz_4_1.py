@@ -9,7 +9,7 @@ while type(a) != float:   #обработка исключений
     print('неправильно ввели 1 число')
     a = input('введите 1-e число ')
 
-while type(n) != int:   #обработка исключений
+while type(n) != int:
   try:
     n = int(n)
   except ValueError:
