@@ -2,14 +2,14 @@
 # 1 - a + a2 - a3
 a = input("введите вещественное число ")
 n = input("введите целое число ")
-while type(a) != float:
+while type(a) != float:   #обработка исключений
   try:
     a = float(a)
   except ValueError:
     print('неправильно ввели 1 число')
     a = input('введите 1-e число ')
 
-while type(n) != int:
+while type(n) != int:   #обработка исключений
   try:
     n = int(n)
   except ValueError:
@@ -20,7 +20,7 @@ summ = 0.0
 result = 1.0
 count = 0
 
-if n > 0:
+if n > 0:   #проверка на положительное число
   while count <= n:
     summ += result
     result *= -a
