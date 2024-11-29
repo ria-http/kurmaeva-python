@@ -24,5 +24,4 @@ while type(m1) != int:  # обработка исключений
   except ValueError:
     print('неправильно ввели 2 число')
     m1 = input('введите 2-e число ')
-
 prak(n1, m1)
