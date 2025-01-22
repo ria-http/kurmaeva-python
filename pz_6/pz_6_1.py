@@ -10,6 +10,7 @@ while type(n) != int:  # обработка исключений
 left = 0  # начало списка
 right = n - 1  # конец списка
 a = list(range(n))
+print(a)
 result = []
 
 while left <= right:
