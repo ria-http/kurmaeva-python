@@ -5,8 +5,8 @@ matr = [
     [7, 8, 9]
 ]
 polovina = len(matr) // 2
-srez = matr[polovina:]  #  у меня получился индекс 1, значит матрицу мы делим на до 1 индекса и после(оно и нужно)
+srez = matr[polovina:]
 print(srez)
 
-summ = sum(sum(el) for el in srez)  # сначала ищу сумму 2 и 3 строки по очереди для элементов в срезе, затем все суммирую
+summ = sum(sum(el) for el in srez)
 print(summ)

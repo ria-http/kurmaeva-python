@@ -5,7 +5,7 @@ matr = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-sum_str = [sum(el) for el in matr]  # перебираю каждую строку и записываю в новый список поочередно сумму элементов каждой строки
+sum_str = [sum(el) for el in matr]
 print(sum_str)
 
 matr[-1] = sum_str
