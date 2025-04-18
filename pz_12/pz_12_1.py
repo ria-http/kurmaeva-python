@@ -1,5 +1,6 @@
 # В последовательности на n целых чисел умножить все элементы на первый элемент
 import random
+
 n = int(input('введите количество чисел '))
 listt = ([random.randint(0,50) for el in range(n)])
 
