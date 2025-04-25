@@ -1,13 +1,19 @@
 # В двумерном списке найти суммы элементов каждой строки и поместить их в новый массив.
-# Выполнить замену элементов третьего столбца исходной матрицы на полученные суммы.
-matr = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+# Выполнить замену элементов третьей строки исходной матрицы на полученные суммы.
+import random
+strr = int(input('введите количество строк '))
+col = int(input('введите количество столбцов '))
+
+matr = [[random.randint(0,10) for el in range(col)] for el in range(strr)]
+
+print('исходная матрица: ')
+for s in matr:
+    print(s)
+
 sum_str = [sum(el) for el in matr]
-print(sum_str)
+print('сумма элементов строк:', sum_str)
 
-matr[-1] = sum_str
-
-print(matr)
+matr[2] = sum_str
+print('итоговая матрица: ')
+for i in matr:
+    print(i)

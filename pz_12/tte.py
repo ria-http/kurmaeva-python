@@ -9,3 +9,21 @@ import random
 word = input('ВВЕДИТЕ СЛОВА ')  # добавить слова в список, если их длина больше 4
 listt = list(word.split(' '))
 print([el for el in listt if len(el) > 4])
+
+
+
+num = 9119
+result = 0
+multiplier = 1
+
+while num > 0:
+    digit = num % 10
+    squar = digit * digit
+
+    # Сдвиг результата
+    result += squar * multiplier
+
+    multiplier *= 100  # Поскольку каждая цифра в квадрате может занимать до 2-х цифр
+    number //= 10
+
+print(result)
