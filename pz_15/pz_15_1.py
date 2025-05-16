@@ -60,3 +60,7 @@ print("исполнителем стал Петров")
 
 cur.execute("UPDATE instruction SET name = 'провести совещание' WHERE name = 'провести аудит'")
 print("изменено название поручения на 'провести совещание'")
+
+print('таблица после изменений: ')
+for i in cur.execute('SELECT * FROM instruction'):
+    print(i)
