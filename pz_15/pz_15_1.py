@@ -18,45 +18,45 @@ info = [
 
 with sq.connect('execution_control.db') as con:
     cur = con.cursor()
-    cur.execute("drop table if exists instruction")
-    cur.execute("""create table if not exists instruction(
-    id integer primary key autoincrement,
-    name text not null,
-    start_date date not null,
-    lead_time text not null,
-    executor text not null
+    cur.execute("DROP TABLE IF EXISTS instruction")
+    cur.execute("""CREATE TABLE IF NOT EXISTS instruction(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,  
+    name TEXT NOT NULL,
+    start_date TEXT NOT NULL,
+    lead_time TEXT NOT NULL,
+    executor TEXT NOT NULL
     )""")
-    cur.executemany("insert into instruction values(?, ?, ?, ?, ?)", info)
+    cur.executemany("INSERT INTO instruction VALUES(?, ?, ?, ?, ?)", info)
 
 print("поручение Иванова:")
-cur.execute("select * from instruction where executor = 'Иванов'")
+cur.execute("SELECT * FROM instruction WHERE executor = 'Иванов'")
 for row in cur.fetchall():
     print(row)
 
 print("поручения со сроком до 15.05.2025:")
-cur.execute("select * from instruction where lead_time = '15.05.2025'")
+cur.execute("SELECT * FROM instruction WHERE lead_time = '15.05.2025'")
 for row in cur.fetchall():
     print(row)
 
 print("поручения 10.05.2025:")
-cur.execute("select * from instruction where start_date = '10.05.2025'")
+cur.execute("SELECT * FROM instruction WHERE start_date = '10.05.2025'")
 for row in cur.fetchall():
     print(row)
 
-cur.execute("delete from instruction where id = 3")
+cur.execute("DELETE FROM instruction WHERE id = 3")
 print("поручение с id=3 удалено")
 
-cur.execute("delete from instruction where name = 'встреча'")
+cur.execute("DELETE FROM instruction WHERE name = 'встреча'")
 print("поручение 'встреча' удалено")
 
-cur.execute("delete from instruction where executor = 'Николаев'")
+cur.execute("DELETE FROM instruction WHERE executor = 'Николаев'")
 print("поручение Николаева удалено")
 
-cur.execute("update instruction set lead_time = '18.05.2025' where id = 1")
-print("изменен срок исполнения id=1")
+cur.execute("UPDATE instruction SET lead_time = '18.05.2025' WHERE id = 1")
+print("изменен срок исполнения")
 
-cur.execute("update instruction set executor = 'Петров' where executor = 'Петрова'")
+cur.execute("UPDATE instruction SET executor = 'Петров' WHERE executor = 'Петрова'")
 print("исполнителем стал Петров")
 
-cur.execute("update instruction set name = 'провести совещание' where name = 'провести аудит'")
+cur.execute("UPDATE instruction SET name = 'провести совещание' WHERE name = 'провести аудит'")
 print("изменено название поручения на 'провести совещание'")
