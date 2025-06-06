@@ -10,9 +10,8 @@ class Book:
         print(f"Вы читаете книгу: '{self.title}' автора {self.author} ({self.pages} стр.).")
 
     def write(self):
-        print(f"Книга '{self.title}' была написана автором {self.author}.")
+        print(f"Книга {self.title} была написана автором {self.author}.")
 
-# Пример использования
 if __name__ == "__main__":
     book = Book("Властелин колец", "Дж. Р. Р. Толкин", 771)
     book.write()
