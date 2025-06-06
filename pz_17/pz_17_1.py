@@ -61,11 +61,11 @@ for field in fields:
     if field == "Address":
         widget = tk.Text(frame, height=4, width=35)
     elif "State" in field:
-        widget = ttk.Combobox(frame, values=["California", "Texas", "Indiana"], state="readonly", width=30)
-        widget.set("California")
+        widget = ttk.Combobox(frame, values=["Select"], state="readonly", width=30)
+        widget.set("Select")
     elif "Country" in field:
-        widget = ttk.Combobox(frame, values=["USA", "Canada", "Liechtenstein"], state="readonly", width=30)
-        widget.set("USA")
+        widget = ttk.Combobox(frame, values=["Select"], state="readonly", width=30)
+        widget.set("Select")
     else:
         widget = ttk.Entry(frame, width=33)
 
