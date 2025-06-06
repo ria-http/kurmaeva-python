@@ -1,3 +1,4 @@
+# Дано трехзначное число. Найти сумму и произведение его цифр.
 import tkinter as tk
 from tkinter import messagebox
 
